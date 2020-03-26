@@ -1,0 +1,56 @@
+<div class="container">
+    <h2>Registration Form</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="registrationFormSubmit()">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Firstname</label>
+            <input type="text" class="form-control" [formControl]="registrationForm.get('firstname')"
+                placeholder="Enter email">
+
+            <small class="form-text text-danger"
+                *ngIf="isLoginFormSubmited && registrationForm.get('firstname').invalid && (registrationForm.get('firstname').dirty || registrationForm.get('firstname').touched)">
+                Please enter valide firstname.</small>
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Lastname</label>
+            <input type="text" class="form-control" [formControl]="registrationForm.get('lastname')"
+                placeholder="Enter email">
+
+            <small class="form-text text-danger"
+                *ngIf="isLoginFormSubmited && registrationForm.get('lastname').invalid && (registrationForm.get('lastname').dirty || registrationForm.get('lastname').touched)">
+                Please enter valide lastname.</small>
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" class="form-control" [formControl]="registrationForm.get('username')"
+                placeholder="Enter email">
+
+            <small class="form-text text-danger"
+                *ngIf="isLoginFormSubmited && registrationForm.get('username').invalid && (registrationForm.get('username').dirty || registrationForm.get('username').touched)">
+                Please enter valide username.</small>
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Password</label>
+            <input type="text" class="form-control" [formControl]="registrationForm.get('password')"
+                placeholder="Enter email">
+
+            <small class="form-text text-danger"
+                *ngIf="isLoginFormSubmited && registrationForm.get('password').invalid && (registrationForm.get('password').dirty || registrationForm.get('password').touched)">
+                Please enter valide passowrd.</small>
+
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            <input type="text" class="form-control" [formControl]="registrationForm.get('address')"
+                placeholder="Enter email">
+
+            <small class="form-text text-danger"
+                *ngIf="isLoginFormSubmited && registrationForm.get('username').invalid && (registrationForm.get('username').dirty || registrationForm.get('username').touched)">
+                Please enter valide address.</small>
+
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>

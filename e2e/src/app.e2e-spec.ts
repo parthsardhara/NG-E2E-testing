@@ -1,16 +1,24 @@
-import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
+import { LoginPage } from './login.po';
 
 describe('workspace-project App', () => {
-  let page: AppPage;
+  let page: LoginPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new LoginPage();
   });
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getTitleText()).toEqual('my-dream-app app is running!');
+  it('should display \'Login Form\' title on the login page.', () => {
+    page.navigateTo('/login');
+    expect(page.getTitleText()).toEqual('Login Form');
+  });
+
+  it('Should redirect to the login page.', () => {
+    page.navigateTo('/login');
+    browser.sleep(2000);
+    page.setLoginFormValue();
+    browser.sleep(2000);
+    expect(browser.getCurrentUrl()).toContain('/home');
   });
 
   afterEach(async () => {
