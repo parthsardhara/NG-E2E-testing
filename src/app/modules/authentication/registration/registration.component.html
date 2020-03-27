@@ -3,54 +3,46 @@
     <form [formGroup]="registrationForm" (ngSubmit)="registrationFormSubmit()">
         <div class="form-group">
             <label for="exampleInputEmail1">Firstname</label>
-            <input type="text" class="form-control" [formControl]="registrationForm.get('firstname')"
-                placeholder="Enter email">
-
+            <input type="text" id="registrationFormFirstname" class="form-control" [formControl]="registrationForm.get('firstname')"
+                placeholder="Enter firstname">
             <small class="form-text text-danger"
                 *ngIf="isLoginFormSubmited && registrationForm.get('firstname').invalid && (registrationForm.get('firstname').dirty || registrationForm.get('firstname').touched)">
                 Please enter valide firstname.</small>
-
         </div>
+
         <div class="form-group">
             <label for="exampleInputEmail1">Lastname</label>
-            <input type="text" class="form-control" [formControl]="registrationForm.get('lastname')"
-                placeholder="Enter email">
+            <input type="text" id="registrationFormLastname" class="form-control" [formControl]="registrationForm.get('lastname')"
+                placeholder="Enter lastname">
 
             <small class="form-text text-danger"
                 *ngIf="isLoginFormSubmited && registrationForm.get('lastname').invalid && (registrationForm.get('lastname').dirty || registrationForm.get('lastname').touched)">
                 Please enter valide lastname.</small>
-
         </div>
+
         <div class="form-group">
-            <label for="exampleInputEmail1">Username</label>
-            <input type="text" class="form-control" [formControl]="registrationForm.get('username')"
+            <label for="exampleInputEmail1">Email</label>
+            <input type="text" id="registrationFormEmail" class="form-control" [formControl]="registrationForm.get('email')"
                 placeholder="Enter email">
 
             <small class="form-text text-danger"
-                *ngIf="isLoginFormSubmited && registrationForm.get('username').invalid && (registrationForm.get('username').dirty || registrationForm.get('username').touched)">
-                Please enter valide username.</small>
-
+                *ngIf="isLoginFormSubmited && registrationForm.get('email').invalid && (registrationForm.get('email').dirty || registrationForm.get('email').touched)">
+                Please enter valide email.</small>
         </div>
+
         <div class="form-group">
             <label for="exampleInputEmail1">Password</label>
-            <input type="text" class="form-control" [formControl]="registrationForm.get('password')"
-                placeholder="Enter email">
+            <input type="text" id="registrationFormPasssword" class="form-control" [formControl]="registrationForm.get('password')"
+                placeholder="Enter passowrd">
 
             <small class="form-text text-danger"
                 *ngIf="isLoginFormSubmited && registrationForm.get('password').invalid && (registrationForm.get('password').dirty || registrationForm.get('password').touched)">
                 Please enter valide passowrd.</small>
-
         </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Address</label>
-            <input type="text" class="form-control" [formControl]="registrationForm.get('address')"
-                placeholder="Enter email">
 
-            <small class="form-text text-danger"
-                *ngIf="isLoginFormSubmited && registrationForm.get('username').invalid && (registrationForm.get('username').dirty || registrationForm.get('username').touched)">
-                Please enter valide address.</small>
-
+        <button class="btn btn-primary" id="registrationFormSubmit" type="submit">Submit</button>
+        <div class="mt-2">
+            <a [routerLink]="['/login']" routerLinkActive="router-link-active" id="goToLoginPage">Go to Login page</a>
         </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </div>

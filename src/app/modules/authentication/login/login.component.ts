@@ -10,8 +10,11 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   public loginForm = new FormGroup({
-    username: new FormControl(null, [Validators.required]),
-    password: new FormControl(null, [Validators.required]),
+    email: new FormControl(null, [
+      Validators.required,
+      Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+    ]),
+    password: new FormControl(null, [Validators.required, Validators.minLength(5)]),
   });
 
   public isLoginFormSubmited: boolean = false;
@@ -21,11 +24,11 @@ export class LoginComponent implements OnInit {
 
   loginFormSubmit() {
     this.isLoginFormSubmited = true;
-    if (this.loginForm.get('username').value === 'admin' && this.loginForm.get('password').value === 'admin') {
-      localStorage.setItem('username', this.loginForm.get('username').value);
+    if (this.loginForm.valid) {
+      localStorage.setItem('email', this.loginForm.get('email').value);
       localStorage.setItem('password', this.loginForm.get('password').value);
       this.loginForm.reset();
-      this.router.navigate(['user-portal', 'home']);
+      this.router.navigate(['/user-portal', 'home']);
     }
   }
 }

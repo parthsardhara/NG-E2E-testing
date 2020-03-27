@@ -15,8 +15,35 @@ export class LoginPage {
     }
 
     setLoginFormValue() {
-        element(by.id('loginFormUsername')).sendKeys('admin');
+        browser.sleep(1000);
+        element(by.id('loginFormUsername')).sendKeys('admin@gmail.com');
+        browser.sleep(1000);
         element(by.id('loginFormPassword')).sendKeys('admin');
+        browser.sleep(1000);
         element(by.id('loginFormSubmit')).click();
+    }
+
+    setLoginFormInvalidValue() {
+        browser.sleep(1000);
+        element(by.id('loginFormUsername')).sendKeys('admin');
+        browser.sleep(1000);
+        element(by.id('loginFormPassword')).sendKeys('');
+        browser.sleep(1000);
+        element(by.id('loginFormSubmit')).click();
+    }
+
+    setLoginFormEmptyValue() {
+        browser.sleep(1000);
+        element(by.id('loginFormUsername')).sendKeys('');
+        browser.sleep(1000);
+        element(by.id('loginFormPassword')).sendKeys('');
+        browser.sleep(1000);
+        element(by.id('loginFormSubmit')).click();
+    }
+    
+    goToRegistrationPage(){
+        browser.sleep(1000);
+        element(by.id('goToRegistrationPage')).click();
+        browser.sleep(1000);
     }
 }
