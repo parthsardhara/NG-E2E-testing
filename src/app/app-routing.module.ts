@@ -8,7 +8,7 @@ const routes: Routes = [
     },
     {
         path: 'user-portal',
-        loadChildren: () => import('./modules/user-portal/user-portal-routing.module').then(m => m.UserPortalRoutingModule),
+        loadChildren: () => import('./modules/user-portal/user-portal.module').then(m => m.UserPortalModule),
     },
 ];
 

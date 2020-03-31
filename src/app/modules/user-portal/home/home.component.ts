@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  modalRef: BsModalRef;
+  data;
 
-  ngOnInit(): void {
+  constructor(private modalService: BsModalService, private http: HttpClient) { }
+
+  openModal(template: TemplateRef<any>) {
+    console.log('template :', template);
+    this.modalRef = this.modalService.show(template);
   }
 
+  ngOnInit(): void {
+    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe(res => {
+      this.data = res;
+      console.log('res :', this.data);
+    });
+  }
 }

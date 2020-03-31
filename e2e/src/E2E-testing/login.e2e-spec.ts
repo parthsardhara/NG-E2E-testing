@@ -1,14 +1,11 @@
 import { browser, logging } from 'protractor';
-import { LoginPage } from './login.po';
-import { RegistrationPage } from './registration.po';
+import { LoginPage } from '../Page-Object/login.po';
 
 describe('workspace-project App', () => {
   let loginPage: LoginPage;
-  let registrationPage: RegistrationPage;
 
   beforeEach(() => {
     loginPage = new LoginPage();
-    registrationPage = new RegistrationPage();
   });
 
   it('should display \'Login Form\' title on the login page.', () => {
@@ -44,43 +41,6 @@ describe('workspace-project App', () => {
     loginPage.navigateTo('/login');
     browser.sleep(1000);
     loginPage.goToRegistrationPage();
-    expect(browser.getCurrentUrl()).toContain('/registration');
-  });
-
-
-  it('Should display \'Registration Form\' title on the registration page.', () => {
-    registrationPage.navigateTo('/registration');
-    expect(registrationPage.getRegistrationPageTitleText()).toEqual('Registration Form');
-  });
-
-  it('Shold redirect to login page.', () => {
-    registrationPage.navigateTo('/registration');
-    browser.sleep(1000);
-    registrationPage.goToLoginPage();
-    expect(browser.getCurrentUrl()).toContain('/login');
-  });
-
-  it('Should redirect to the home page.', () => {
-    registrationPage.navigateTo('/registration');
-    browser.sleep(1000);
-    registrationPage.setRegistrationFormValue();
-    browser.sleep(2000);
-    expect(browser.getCurrentUrl()).toContain('/login');
-  });
-
-  it('If all the field is empty then it should stay on registration page.', () => {
-    registrationPage.navigateTo('/registration');
-    browser.sleep(1000);
-    registrationPage.setRegistrationFormEmptyValue();
-    browser.sleep(2000);
-    expect(browser.getCurrentUrl()).toContain('/registration');
-  });
-
-  it('If form is not valid then it should stay on registration page.', () => {
-    registrationPage.navigateTo('/registration');
-    browser.sleep(1000);
-    registrationPage.setRegistrationFormInvalidValue();
-    browser.sleep(2000);
     expect(browser.getCurrentUrl()).toContain('/registration');
   });
 

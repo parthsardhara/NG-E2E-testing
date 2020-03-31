@@ -46,7 +46,6 @@ export class RegistrationPage {
         element(by.id('registrationFormSubmit')).click();
     }
 
-
     setRegistrationFormInvalidValue() {
         browser.sleep(1000);
         element(by.id('registrationFormFirstname')).sendKeys('Parth');

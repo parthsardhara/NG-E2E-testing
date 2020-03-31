@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
   declarations: [UserPortalComponent, HomeComponent],
   imports: [
     CommonModule,
-    UserPortalRoutingModule
+    UserPortalRoutingModule,
   ]
 })
 export class UserPortalModule { }

@@ -17,6 +17,7 @@ export class RegistrationComponent implements OnInit {
       Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
     ]),
     password: new FormControl(null, [Validators.required, Validators.minLength(5)]),
+    // phoneNumber: new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
   });
 
   public isLoginFormSubmited:boolean = false;

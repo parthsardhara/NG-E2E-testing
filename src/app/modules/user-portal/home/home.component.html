@@ -1,1 +1,23 @@
-<h2>Welcome to home...</h2>
+<!-- <ul>
+  <li *ngFor="let product of PRODUCTS; let num = index">
+    <h2># {{num}} {{product.name}}</h2>
+  </li>
+</ul> -->
+
+<!-- <br>
+<br> -->
+
+<button type="button" id="openHomeModalButton" class="btn btn-primary" (click)="openModal(template)">Create template
+  modal</button>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left" id="homePageTitle">Home page</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    Welcome
+  </div>
+</ng-template>
