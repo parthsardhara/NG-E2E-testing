@@ -1,23 +1,41 @@
-<!-- <ul>
-  <li *ngFor="let product of PRODUCTS; let num = index">
-    <h2># {{num}} {{product.name}}</h2>
-  </li>
-</ul> -->
 
-<!-- <br>
-<br> -->
 
-<button type="button" id="openHomeModalButton" class="btn btn-primary" (click)="openModal(template)">Create template
-  modal</button>
+<button type="button" id="openHomeModalButton" class="btn btn-primary" (click)="openModal(template)">Open Modal</button>
 
 <ng-template #template>
   <div class="modal-header">
     <h4 class="modal-title pull-left" id="homePageTitle">Home page</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+    <button type="button" id="closeTheModal" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    Welcome
+    <div class="container">
+      <form [formGroup]="additionForm" (ngSubmit)="additionFormSubmit()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Num1</label>
+          <input type="text" id="additionFormNum1" class="form-control" [formControl]="additionForm.get('num1')"
+            placeholder="Enter num1">
+          <small class="form-text text-danger" id="additionFormNum1Error"
+            *ngIf="isAdditionFormSubmited && additionForm.get('num1').invalid && (additionForm.get('num1').dirty || additionForm.get('num1').touched)">
+            Please enter number only.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Num2</label>
+          <input type="text" id="additionFormNum2" class="form-control" [formControl]="additionForm.get('num2')"
+            placeholder="Enter num2">
+          <small class="form-text text-danger"
+            *ngIf="isAdditionFormSubmited && additionForm.get('num2').invalid && (additionForm.get('num2').dirty || additionForm.get('num2').touched)">
+            Please enter number only.</small>
+
+        </div>
+        <button class="btn btn-primary btn-block" type="submit" id="additionFormSubmit">Submit</button>
+      </form>
+
+      <div class="form-group mt-2">
+        <input type="text" id="additionFormSum" readonly="true" class="form-control" [(ngModel)]="sum"
+          placeholder="Sum is...">
+      </div>
+    </div>
   </div>
 </ng-template>

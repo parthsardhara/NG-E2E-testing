@@ -1,4 +1,31 @@
-<p>user-portal works!</p>
+<button class="btn btn-primary" id="afterClick" (click)="afterClick()">click</button>
+
+<ng-container *ngIf="initially; else elseTemplate">
+    <h2 id="welcomeIf">welcome if</h2>
+</ng-container>
+<ng-template #elseTemplate>
+    <h2 id="welcomeElse">welcome else</h2>
+</ng-template>
+
+<button id="showTable" class="btn btn-primary" (click)="showTable()">Show Table</button>
+<br>
+
+<ng-container *ngIf="data && data.length > 0">
+    <table id="jsonPlaceholderDataTable" class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of data; let num = index">
+                <td>{{product.id}}</td>
+                <td>{{product.title}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
 
 <br>
 <router-outlet></router-outlet>
