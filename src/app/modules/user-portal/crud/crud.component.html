@@ -1,0 +1,63 @@
+<button id="addEmployeeButton" class="btn btn-primary mt-2" (click)="addEmployee(template)">Add Employee</button>
+
+<ng-container *ngIf="crudData && crudData.length > 0">
+  <div class="mt-4">
+    <h5 id="employeeDetails">Employee details</h5>
+    <table id="crudDataTable" class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Company name</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="crudTableBody">
+        <tr id="{{product.id}}" *ngFor="let product of crudData; let num = index">
+          <td class="productId" id="crudDataId{{product.id}}">{{product.id}}</td>
+          <td class="productName" id="crudDataName{{product.id}}">{{product.name}}</td>
+          <td class="productCompany" id="crudDataCompany{{product.id}}">{{product.company}}</td>
+          <td id="edit{{product.id}}" style="cursor: pointer;" (click)="openEditCrudDataModal(template, product)">Edit</td>
+          <td id="delete{{product.id}}" style="cursor: pointer;" (click)="deleteCrudData(product)">Delete</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left" *ngIf="editCrudDataForm.get('id').value" id="editYourDetails">Edit your details</h4>
+    <h4 class="modal-title pull-left" *ngIf="!editCrudDataForm.get('id').value" id="addYourDetails">Add your details</h4>
+    <button type="button" id="closeTheModal" class="close pull-right" aria-label="Close"
+      (click)="editCrudDataModalHide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="container">
+      <form [formGroup]="editCrudDataForm" (ngSubmit)="editCrudDataFormSubmit()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Name</label>
+          <input type="text" id="editCrudDataFormName" class="form-control" [formControl]="editCrudDataForm.get('name')"
+            placeholder="Enter name">
+          <small class="form-text text-danger" id="editCrudDataFormNameError"
+            *ngIf="isEditCrudDataFormSubmited && editCrudDataForm.get('name').invalid && (editCrudDataForm.get('name').dirty || editCrudDataForm.get('name').touched)">
+            Please enter name.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Company</label>
+          <input type="text" id="editCrudDataFormCompany" class="form-control"
+            [formControl]="editCrudDataForm.get('company')" placeholder="Enter company">
+          <small class="form-text text-danger" id="editCrudDataFormCompanyError"
+            *ngIf="isEditCrudDataFormSubmited && editCrudDataForm.get('company').invalid && (editCrudDataForm.get('company').dirty || editCrudDataForm.get('company').touched)">
+            Please enter company name.</small>
+
+        </div>
+        <button class="btn btn-primary btn-block" type="submit" id="editCrudDataFormSubmit">Submit</button>
+      </form>
+    </div>
+  </div>
+</ng-template>

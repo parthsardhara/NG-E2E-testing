@@ -8,12 +8,36 @@ describe('workspace-project Home', () => {
     homePage = new HomePage();
   });
 
+  it('should display \'WELCOME IF\' on the Home page.', () => {
+    homePage.navigateTo('/user-portal/home');
+    browser.sleep(2000);
+    expect(homePage.getBeforeClick()).toBe('welcome if');
+  });
+
+  it('should display \'WELCOME ELSE\' title on the Home page.', () => {
+    homePage.navigateTo('/user-portal/home');
+    browser.sleep(2000);
+    expect(homePage.getAfterClick()).toBe('welcome else');
+  });
+
+  it('should display \'Show Table\' button on the Home page.', () => {
+    homePage.navigateTo('/user-portal/home');
+    browser.sleep(2000);
+    expect(homePage.getShowTable()).toBe('Show Table');
+  });
+
+  it('should display \'Table\' on the Home page.', () => {
+    homePage.navigateTo('/user-portal/home');
+    browser.sleep(2000);
+    expect(homePage.getDataTable()).toBeTruthy();
+  });
+
   it('should display \'Home page\' title on the Home page.', () => {
     homePage.navigateTo('/user-portal/home');
     browser.sleep(2000);
     expect(homePage.getModalTitleText()).toEqual('Home page');
   });
-  
+
   it('should display Sum of num1 and num2 in the modal.', () => {
     homePage.navigateTo('/user-portal/home');
     browser.sleep(2000);
@@ -27,7 +51,6 @@ describe('workspace-project Home', () => {
     browser.sleep(2000);
     expect(element(by.id('additionFormNum1Error')).getText()).toContain('Please enter number only');
   });
-  
 
   it('should close the modal.', () => {
     homePage.navigateTo('/user-portal/home');

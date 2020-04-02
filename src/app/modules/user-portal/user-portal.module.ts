@@ -4,10 +4,11 @@ import { UserPortalComponent } from './user-portal.component';
 import { UserPortalRoutingModule } from './user-portal-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CrudComponent } from './crud/crud.component';
 
 
 @NgModule({
-  declarations: [UserPortalComponent, HomeComponent],
+  declarations: [UserPortalComponent, HomeComponent, CrudComponent],
   imports: [
     CommonModule,
     UserPortalRoutingModule,

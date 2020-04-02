@@ -1,11 +1,38 @@
+<button class="btn btn-primary mt-2" id="afterClick" (click)="afterClick()">click</button>
+<ng-container *ngIf="initially; else elseTemplate">
+    <h2 id="welcomeIf">welcome if</h2>
+</ng-container>
+<ng-template #elseTemplate>
+    <h2 id="welcomeElse">welcome else</h2>
+</ng-template>
+
+<button id="showTable" class="btn btn-primary mt-2" (click)="showTable()">Show Table</button>
+<br>
+
+<ng-container *ngIf="data && data.length > 0">
+    <table id="jsonPlaceholderDataTable" class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of data; let num = index">
+                <td>{{product.id}}</td>
+                <td>{{product.title}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
 
 
-<button type="button" id="openHomeModalButton" class="btn btn-primary" (click)="openModal(template)">Open Modal</button>
+<button type="button" id="openHomeModalButton" class="btn btn-primary mt-2" (click)="openModal(template)">Open Modal</button>
 
 <ng-template #template>
   <div class="modal-header">
     <h4 class="modal-title pull-left" id="homePageTitle">Home page</h4>
-    <button type="button" id="closeTheModal" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+    <button type="button" id="closeTheModal" class="close pull-right" aria-label="Close" (click)="modalRefHide()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>

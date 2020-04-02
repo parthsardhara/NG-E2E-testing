@@ -11,34 +11,34 @@ export class LoginPage {
     }
 
     getSubmitButtonText() {
-        return element(by.id('loginFormSubmit')).getText();
+        return element(by.id('loginFormTemplateSubmitButton')).getText();
     }
 
     setLoginFormValue() {
         browser.sleep(1000);
-        element(by.id('loginFormUsername')).sendKeys('admin@gmail.com');
+        element(by.id('loginFormTemplateEmail')).sendKeys('admin@gmail.com');
         browser.sleep(1000);
-        element(by.id('loginFormPassword')).sendKeys('admin');
+        element(by.id('loginFormTemplatePassword')).sendKeys('admin');
         browser.sleep(1000);
-        element(by.id('loginFormSubmit')).click();
+        element(by.id('loginFormTemplateSubmitButton')).click();
     }
 
     setLoginFormInvalidValue() {
         browser.sleep(1000);
-        element(by.id('loginFormUsername')).sendKeys('admin');
+        element(by.id('loginFormTemplateEmail')).sendKeys('admin');
         browser.sleep(1000);
-        element(by.id('loginFormPassword')).sendKeys('');
+        element(by.id('loginFormTemplatePassword')).sendKeys('');
         browser.sleep(1000);
-        element(by.id('loginFormSubmit')).click();
+        element(by.id('loginFormTemplateSubmitButton')).click();
     }
 
     setLoginFormEmptyValue() {
         browser.sleep(1000);
-        element(by.id('loginFormUsername')).sendKeys('');
+        element(by.id('loginFormTemplateEmail')).sendKeys('');
         browser.sleep(1000);
-        element(by.id('loginFormPassword')).sendKeys('');
+        element(by.id('loginFormTemplatePassword')).sendKeys('');
         browser.sleep(1000);
-        element(by.id('loginFormSubmit')).click();
+        element(by.id('loginFormTemplateSubmitButton')).click();
     }
     
     goToRegistrationPage(){
