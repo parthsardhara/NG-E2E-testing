@@ -6,5 +6,4 @@ export class UserPortalPage {
         return browser.get(redirectTo);
     }
 
-
 }

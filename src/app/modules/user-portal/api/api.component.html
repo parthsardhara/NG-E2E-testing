@@ -1,0 +1,18 @@
+<button id="showTable" class="btn btn-primary mt-2 mb-2" (click)="showTable()">Show Table</button>
+
+<ng-container *ngIf="data && data.length > 0">
+    <table id="jsonPlaceholderDataTable" class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of data; let num = index">
+                <td>{{product.id}}</td>
+                <td>{{product.title}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>

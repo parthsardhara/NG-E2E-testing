@@ -5,10 +5,11 @@ import { UserPortalRoutingModule } from './user-portal-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CrudComponent } from './crud/crud.component';
+import { ApiComponent } from './api/api.component';
 
 
 @NgModule({
-  declarations: [UserPortalComponent, HomeComponent, CrudComponent],
+  declarations: [UserPortalComponent, HomeComponent, CrudComponent, ApiComponent],
   imports: [
     CommonModule,
     UserPortalRoutingModule,

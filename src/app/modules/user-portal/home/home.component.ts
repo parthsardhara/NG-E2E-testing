@@ -1,6 +1,5 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -12,7 +11,6 @@ export class HomeComponent implements OnInit {
 
   modalRef: BsModalRef;
   public sum: number;
-  public data;
   public initially = true;
 
   public isAdditionFormSubmited: boolean = false;
@@ -21,7 +19,7 @@ export class HomeComponent implements OnInit {
     num2: new FormControl(null, [Validators.required, Validators.pattern(/^[0-9]+$/)]),
   });
 
-  constructor(private modalService: BsModalService, private http: HttpClient) { }
+  constructor(private modalService: BsModalService) { }
 
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
@@ -47,10 +45,4 @@ export class HomeComponent implements OnInit {
     this.initially = !this.initially;
   }
 
-  showTable() {
-    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe(res => {
-      this.data = res;
-      console.log('res :', this.data);
-    });
-  }
 }

@@ -6,27 +6,6 @@
     <h2 id="welcomeElse">welcome else</h2>
 </ng-template>
 
-<button id="showTable" class="btn btn-primary mt-2" (click)="showTable()">Show Table</button>
-<br>
-
-<ng-container *ngIf="data && data.length > 0">
-    <table id="jsonPlaceholderDataTable" class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">id</th>
-                <th scope="col">Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let product of data; let num = index">
-                <td>{{product.id}}</td>
-                <td>{{product.title}}</td>
-            </tr>
-        </tbody>
-    </table>
-</ng-container>
-
-
 <button type="button" id="openHomeModalButton" class="btn btn-primary mt-2" (click)="openModal(template)">Open Modal</button>
 
 <ng-template #template>

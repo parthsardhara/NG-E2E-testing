@@ -1,4 +1,4 @@
-import { browser, logging } from 'protractor';
+import { browser, logging, element, by } from 'protractor';
 import { UserPortalPage } from '../Page-Object/user-portal.po';
 
 describe('workspace-project UserPortalPage', () => {
@@ -7,7 +7,6 @@ describe('workspace-project UserPortalPage', () => {
     beforeEach(() => {
         userPortalPage = new UserPortalPage();
     });
-
 
     afterEach(async () => {
         // Assert that there are no errors emitted from the browser

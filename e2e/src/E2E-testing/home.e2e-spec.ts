@@ -20,18 +20,6 @@ describe('workspace-project Home', () => {
     expect(homePage.getAfterClick()).toBe('welcome else');
   });
 
-  it('should display \'Show Table\' button on the Home page.', () => {
-    homePage.navigateTo('/user-portal/home');
-    browser.sleep(2000);
-    expect(homePage.getShowTable()).toBe('Show Table');
-  });
-
-  it('should display \'Table\' on the Home page.', () => {
-    homePage.navigateTo('/user-portal/home');
-    browser.sleep(2000);
-    expect(homePage.getDataTable()).toBeTruthy();
-  });
-
   it('should display \'Home page\' title on the Home page.', () => {
     homePage.navigateTo('/user-portal/home');
     browser.sleep(2000);

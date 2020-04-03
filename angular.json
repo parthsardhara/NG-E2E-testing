@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "my-dream-app": {
@@ -29,7 +29,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/ngx-toastr/toastr.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -120,7 +121,8 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-dream-app:serve"
+            "devServerTarget": "my-dream-app:serve",
+            "port": 4300
           },
           "configurations": {
             "production": {
@@ -129,6 +131,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "my-dream-app"
 }

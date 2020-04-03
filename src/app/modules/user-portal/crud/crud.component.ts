@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-crud',
@@ -25,7 +26,7 @@ export class CrudComponent implements OnInit {
     company: new FormControl(null, [Validators.required]),
   });
 
-  constructor(private modalService: BsModalService) { }
+  constructor(private modalService: BsModalService, private toastrService: ToastrService) { }
 
   ngOnInit(): void { }
 
@@ -43,6 +44,7 @@ export class CrudComponent implements OnInit {
     this.crudData.forEach((element, index) => {
       if (element.id === product.id) {
         this.crudData.splice(index, 1);
+        this.toastrService.error('Deleted successfully');
       }
     });
   }
@@ -56,11 +58,13 @@ export class CrudComponent implements OnInit {
             element.name = this.editCrudDataForm.get('name').value;
             element.company = this.editCrudDataForm.get('company').value;
             this.editCrudDataModalHide();
+            this.toastrService.success('Edit employee successfully.');
           }
         });
       } else {
         this.crudData.push({ id: this.crudData.length + 1, name: this.editCrudDataForm.get('name').value, company: this.editCrudDataForm.get('company').value });
         this.editCrudDataModalHide();
+        this.toastrService.success('Added employee successfully.');
       }
     }
   }

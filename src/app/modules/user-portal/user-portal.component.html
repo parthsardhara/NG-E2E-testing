@@ -2,11 +2,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['home']" routerLinkActive="router-link-active">HOME</a>
+                <a class="nav-link" id="homeInNavbarUserPortal" [routerLink]="['home']" routerLinkActive="router-link-active">HOME</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['crud']" routerLinkActive="router-link-active">CRUD</a>
+                <a class="nav-link" id="crudInNavbarUserPortal" [routerLink]="['crud']" routerLinkActive="router-link-active">CRUD</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="apiInNavbarUserPortal" [routerLink]="['api']" routerLinkActive="router-link-active">API</a>
             </li>
         </ul>
     </div>

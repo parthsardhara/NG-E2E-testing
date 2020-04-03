@@ -18,8 +18,8 @@
           <td class="productId" id="crudDataId{{product.id}}">{{product.id}}</td>
           <td class="productName" id="crudDataName{{product.id}}">{{product.name}}</td>
           <td class="productCompany" id="crudDataCompany{{product.id}}">{{product.company}}</td>
-          <td id="edit{{product.id}}" style="cursor: pointer;" (click)="openEditCrudDataModal(template, product)">Edit</td>
-          <td id="delete{{product.id}}" style="cursor: pointer;" (click)="deleteCrudData(product)">Delete</td>
+          <td class="productEdit" id="edit{{product.id}}" style="cursor: pointer;" (click)="openEditCrudDataModal(template, product)">Edit</td>
+          <td class="productDelete" id="delete{{product.id}}" style="cursor: pointer;" (click)="deleteCrudData(product)">Delete</td>
         </tr>
       </tbody>
     </table>
@@ -31,7 +31,7 @@
   <div class="modal-header">
     <h4 class="modal-title pull-left" *ngIf="editCrudDataForm.get('id').value" id="editYourDetails">Edit your details</h4>
     <h4 class="modal-title pull-left" *ngIf="!editCrudDataForm.get('id').value" id="addYourDetails">Add your details</h4>
-    <button type="button" id="closeTheModal" class="close pull-right" aria-label="Close"
+    <button type="button" id="closeTheCrudModal" class="close pull-right" aria-label="Close"
       (click)="editCrudDataModalHide()">
       <span aria-hidden="true">&times;</span>
     </button>
