@@ -35,10 +35,10 @@
         <div class="form-group">
             <label>Password</label>
             <input type="password" id="loginFormTemplatePassword" class="form-control" name="password" [(ngModel)]="model.password" required
-                minlength="5" #password="ngModel">
+            pattern="^[A-Z]{1}[a-zA-Z\@\#]{7,}[0-9]{4}$" minlength="12" maxlength="12" #password="ngModel">
             <div class="form-control-feedback" *ngIf="password.errors && (password.dirty || password.touched)">
                 <p class="text-danger" *ngIf="password.errors.required">Password is required</p>
-                <p class="text-danger" *ngIf="password.errors.minlength">Password must be at least 5 characters long
+                <p class="text-danger" *ngIf="password.errors.minlength">Password Shoulde be first letter capital, total length only 12, must be @ and # and last 4 digits only.
                 </p>
             </div>
         </div>

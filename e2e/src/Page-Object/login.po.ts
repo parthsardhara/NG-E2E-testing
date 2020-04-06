@@ -18,7 +18,7 @@ export class LoginPage {
         browser.sleep(1000);
         element(by.id('loginFormTemplateEmail')).sendKeys('admin@gmail.com');
         browser.sleep(1000);
-        element(by.id('loginFormTemplatePassword')).sendKeys('admin');
+        element(by.id('loginFormTemplatePassword')).sendKeys('Admins@#1234');
         browser.sleep(1000);
         element(by.id('loginFormTemplateSubmitButton')).click();
     }
