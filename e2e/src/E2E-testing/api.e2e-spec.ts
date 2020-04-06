@@ -15,7 +15,6 @@ describe('workspace-project Api', () => {
   });
 
   it('should display \'Table\' on the API page.', () => {
-    apiPage.navigateTo('/user-portal/api');
     browser.sleep(2000);
     expect(apiPage.getDataTable()).toBeTruthy();
   });

@@ -54,7 +54,7 @@ export class RegistrationPage {
         browser.sleep(1000);
         element(by.id('registrationFormEmail')).sendKeys('');
         browser.sleep(1000);
-        element(by.id('registrationFormPasssword')).sendKeys('admin');
+        element(by.id('registrationFormPasssword')).sendKeys('Admins@#1234');
         browser.sleep(1000);
         element(by.id('registrationFormSubmit')).click();
     }

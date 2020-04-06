@@ -25,8 +25,6 @@ export class HomePage {
     }
 
     getSum() {
-        element(by.id('openHomeModalButton')).click();
-        browser.sleep(1000);
         element(by.id('additionFormNum1')).sendKeys(1);
         browser.sleep(1000);
         element(by.id('additionFormNum2')).sendKeys(3);
@@ -37,6 +35,8 @@ export class HomePage {
     }
 
     showErroSum() {
+        element(by.id('closeTheModal')).click();
+        browser.sleep(1000);
         element(by.id('openHomeModalButton')).click();
         browser.sleep(1000);
         element(by.id('additionFormNum1')).sendKeys('a');
@@ -47,7 +47,6 @@ export class HomePage {
     }
 
     closeSumModal() {
-        element(by.id('openHomeModalButton')).click();
         browser.sleep(1000);
         element(by.id('closeTheModal')).click();
     }

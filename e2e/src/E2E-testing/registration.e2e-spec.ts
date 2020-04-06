@@ -37,7 +37,6 @@ describe('workspace-project Registration', () => {
   });
 
   it('If form is not valid then it should stay on registration page.', () => {
-    registrationPage.navigateTo('/registration');
     browser.sleep(1000);
     registrationPage.setRegistrationFormInvalidValue();
     browser.sleep(2000);

@@ -24,7 +24,7 @@
         <div class="form-group">
             <label>Email</label>
             <input type="email" id="loginFormTemplateEmail" class="form-control" name="email" [(ngModel)]="model.email" required
-                pattern="^[_aA-zZ0-9\-\_]+(\.[_aA-zZ0-9\-\_]+)*@[aA-zZ0-9-\-\_\.]+\.([aA-zZ]{2,15})$" #email="ngModel">
+                pattern="^[_aA-zZ0-9\-\_]+(\.[_aA-zZ0-9\-\_]+)*@[aA-zZ0-9-\-\_\.]+\.([aA-zZ]{2,15})$" #email="ngModel" placeholder="Enter Email">
             <div class="form-control-feedback" *ngIf="email.errors && (email.dirty || email.touched)">
                 <p class="text-danger" *ngIf="email.errors.required">Email is required</p>
                 <p class="text-danger" *ngIf="email.errors.pattern">Please enter valid email.</p>
@@ -35,7 +35,7 @@
         <div class="form-group">
             <label>Password</label>
             <input type="password" id="loginFormTemplatePassword" class="form-control" name="password" [(ngModel)]="model.password" required
-            pattern="^[A-Z]{1}[a-zA-Z\@\#]{7,}[0-9]{4}$" minlength="12" maxlength="12" #password="ngModel">
+            pattern="^[A-Z]{1}[a-zA-Z\@\#]{7,}[0-9]{4}$" minlength="12" maxlength="12" #password="ngModel" placeholder="Enter Password">
             <div class="form-control-feedback" *ngIf="password.errors && (password.dirty || password.touched)">
                 <p class="text-danger" *ngIf="password.errors.required">Password is required</p>
                 <p class="text-danger" *ngIf="password.errors.minlength">Password Shoulde be first letter capital, total length only 12, must be @ and # and last 4 digits only.

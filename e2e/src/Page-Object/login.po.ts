@@ -34,6 +34,8 @@ export class LoginPage {
 
     setLoginFormEmptyValue() {
         browser.sleep(1000);
+        element(by.id('loginFormTemplateEmail')).clear();
+        browser.sleep(1000);
         element(by.id('loginFormTemplateEmail')).sendKeys('');
         browser.sleep(1000);
         element(by.id('loginFormTemplatePassword')).sendKeys('');

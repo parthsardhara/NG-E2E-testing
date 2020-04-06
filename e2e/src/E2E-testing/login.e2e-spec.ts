@@ -14,8 +14,7 @@ describe('workspace-project Login', () => {
   });
 
   it('Should redirect to the home page.', () => {
-    loginPage.navigateTo('/login');
-    browser.sleep(1000);
+    browser.sleep(2000);
     loginPage.setLoginFormValue();
     browser.sleep(2000);
     expect(browser.getCurrentUrl()).toContain('/home');
@@ -30,7 +29,6 @@ describe('workspace-project Login', () => {
   });
 
   it('If username and password is empty then it should stay on login page.', () => {
-    loginPage.navigateTo('/login');
     browser.sleep(1000);
     loginPage.setLoginFormEmptyValue();
     browser.sleep(2000);
@@ -38,7 +36,6 @@ describe('workspace-project Login', () => {
   });
 
   it('Shold redirect to registration page.', () => {
-    loginPage.navigateTo('/login');
     browser.sleep(1000);
     loginPage.goToRegistrationPage();
     expect(browser.getCurrentUrl()).toContain('/registration');
