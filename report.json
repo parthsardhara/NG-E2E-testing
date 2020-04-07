@@ -1,0 +1,227 @@
+[
+  {
+    "description": "workspace-project Api should display 'Show Table' button on the API page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 3551
+  },
+  {
+    "description": "workspace-project Api should display 'Table' on the API page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 5959
+  },
+  {
+    "description": "workspace-project Crud should render 'Add Employee' button on the crud page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 2557
+  },
+  {
+    "description": "workspace-project Crud Should render 'Crud Table' on the Crud page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 2031
+  },
+  {
+    "description": "workspace-project Crud Should render 'Edit your details' on Crud page while edit the details of the employee.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 3474
+  },
+  {
+    "description": "workspace-project Crud Should render 'Add your details' on Crud page while add the details of the employee.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 3196
+  },
+  {
+    "description": "workspace-project Crud After add the employee dertails, Should render employee id, name and compnay name in the table on crud page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 16082
+  },
+  {
+    "description": "workspace-project Crud Should render edited employee id, name and compnay name in the table on crud page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 8390
+  },
+  {
+    "description": "workspace-project Crud Should not render deleted employee's details on the table.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 2129
+  },
+  {
+    "description": "workspace-project Home should display 'WELCOME IF' on the Home page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 3681
+  },
+  {
+    "description": "workspace-project Home should display 'WELCOME ELSE' title on the Home page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 4147
+  },
+  {
+    "description": "workspace-project Home should display 'Home page' title on the Home page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 3201
+  },
+  {
+    "description": "workspace-project Home should display Sum of num1 and num2 in the modal.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 6281
+  },
+  {
+    "description": "workspace-project Home should display error for num1 validation in the modal.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 8396
+  },
+  {
+    "description": "workspace-project Home should close the modal.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 5112
+  },
+  {
+    "description": "workspace-project Login should display 'Login Form' title on the login page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 517
+  },
+  {
+    "description": "workspace-project Login Should redirect to the home page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 7351
+  },
+  {
+    "description": "workspace-project Login If form is not valid then it should stay on login page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 6753
+  },
+  {
+    "description": "workspace-project Login If username and password is empty then it should stay on login page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 7366
+  },
+  {
+    "description": "workspace-project Login Shold redirect to registration page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 3101
+  },
+  {
+    "description": "workspace-project Registration Should display 'Registration Form' title on the registration page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 543
+  },
+  {
+    "description": "workspace-project Registration Shold redirect to login page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 3569
+  },
+  {
+    "description": "workspace-project Registration Should redirect to the home page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 9066
+  },
+  {
+    "description": "workspace-project Registration If all the field is empty then it should stay on registration page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 8939
+  },
+  {
+    "description": "workspace-project Registration If form is not valid then it should stay on registration page.",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 8367
+  }
+]

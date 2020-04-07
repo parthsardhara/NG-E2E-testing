@@ -3,6 +3,7 @@
 // https://github.com/angular/protractor/blob/master/lib/config.ts
 
 const { SpecReporter } = require('jasmine-spec-reporter');
+const JSONReporter = require('jasmine-json-test-reporter');
 
 /**
  * @type { import("protractor").Config }
@@ -23,10 +24,18 @@ exports.config = {
     defaultTimeoutInterval: 30000,
     print: function () { }
   },
+  resultJsonOutputFile: 'report.json',
   onPrepare() {
     require('ts-node').register({
       project: require('path').join(__dirname, './tsconfig.json')
     });
+
+    jasmine.getEnv().addReporter(new JSONReporter({
+      file: 'jasmine-test-results.json',
+      beautify: true,
+      indentationLevel: 4
+    }));
+
     jasmine.getEnv().addReporter(new SpecReporter({ spec: { displayStacktrace: true } }));
   },
   onComplete() {

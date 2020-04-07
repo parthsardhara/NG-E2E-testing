@@ -1,0 +1,662 @@
+{
+    "suite1": {
+        "id": "suite1",
+        "description": "workspace-project Api",
+        "fullName": "workspace-project Api",
+        "failedExpectations": [],
+        "status": "finished",
+        "specs": [
+            {
+                "id": "spec0",
+                "description": "should display 'Show Table' button on the API page.",
+                "fullName": "workspace-project Api should display 'Show Table' button on the API page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toBe",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "4 secs"
+            },
+            {
+                "id": "spec1",
+                "description": "should display 'Table' on the API page.",
+                "fullName": "workspace-project Api should display 'Table' on the API page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toBeTruthy",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "6 secs"
+            }
+        ]
+    },
+    "suite2": {
+        "id": "suite2",
+        "description": "workspace-project App",
+        "fullName": "workspace-project App",
+        "failedExpectations": [],
+        "status": "finished",
+        "specs": []
+    },
+    "suite3": {
+        "id": "suite3",
+        "description": "workspace-project Crud",
+        "fullName": "workspace-project Crud",
+        "failedExpectations": [],
+        "status": "finished",
+        "specs": [
+            {
+                "id": "spec2",
+                "description": "should render 'Add Employee' button on the crud page.",
+                "fullName": "workspace-project Crud should render 'Add Employee' button on the crud page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toEqual",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "3 secs"
+            },
+            {
+                "id": "spec3",
+                "description": "Should render 'Crud Table' on the Crud page.",
+                "fullName": "workspace-project Crud Should render 'Crud Table' on the Crud page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toBeTruthy",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "2 secs"
+            },
+            {
+                "id": "spec4",
+                "description": "Should render 'Edit your details' on Crud page while edit the details of the employee.",
+                "fullName": "workspace-project Crud Should render 'Edit your details' on Crud page while edit the details of the employee.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "3 secs"
+            },
+            {
+                "id": "spec5",
+                "description": "Should render 'Add your details' on Crud page while add the details of the employee.",
+                "fullName": "workspace-project Crud Should render 'Add your details' on Crud page while add the details of the employee.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "3 secs"
+            },
+            {
+                "id": "spec6",
+                "description": "After add the employee dertails, Should render employee id, name and compnay name in the table on crud page.",
+                "fullName": "workspace-project Crud After add the employee dertails, Should render employee id, name and compnay name in the table on crud page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "16 secs"
+            },
+            {
+                "id": "spec7",
+                "description": "Should render edited employee id, name and compnay name in the table on crud page.",
+                "fullName": "workspace-project Crud Should render edited employee id, name and compnay name in the table on crud page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "8 secs"
+            },
+            {
+                "id": "spec8",
+                "description": "Should not render deleted employee's details on the table.",
+                "fullName": "workspace-project Crud Should not render deleted employee's details on the table.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toBeFalsy",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "2 secs"
+            }
+        ]
+    },
+    "suite4": {
+        "id": "suite4",
+        "description": "workspace-project Home",
+        "fullName": "workspace-project Home",
+        "failedExpectations": [],
+        "status": "finished",
+        "specs": [
+            {
+                "id": "spec9",
+                "description": "should display 'WELCOME IF' on the Home page.",
+                "fullName": "workspace-project Home should display 'WELCOME IF' on the Home page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toBe",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "4 secs"
+            },
+            {
+                "id": "spec10",
+                "description": "should display 'WELCOME ELSE' title on the Home page.",
+                "fullName": "workspace-project Home should display 'WELCOME ELSE' title on the Home page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toBe",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "4 secs"
+            },
+            {
+                "id": "spec11",
+                "description": "should display 'Home page' title on the Home page.",
+                "fullName": "workspace-project Home should display 'Home page' title on the Home page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toEqual",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "3 secs"
+            },
+            {
+                "id": "spec12",
+                "description": "should display Sum of num1 and num2 in the modal.",
+                "fullName": "workspace-project Home should display Sum of num1 and num2 in the modal.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toBe",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "6 secs"
+            },
+            {
+                "id": "spec13",
+                "description": "should display error for num1 validation in the modal.",
+                "fullName": "workspace-project Home should display error for num1 validation in the modal.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "8 secs"
+            },
+            {
+                "id": "spec14",
+                "description": "should close the modal.",
+                "fullName": "workspace-project Home should close the modal.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toBeFalsy",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "5 secs"
+            }
+        ]
+    },
+    "suite5": {
+        "id": "suite5",
+        "description": "workspace-project Login",
+        "fullName": "workspace-project Login",
+        "failedExpectations": [],
+        "status": "finished",
+        "specs": [
+            {
+                "id": "spec15",
+                "description": "should display 'Login Form' title on the login page.",
+                "fullName": "workspace-project Login should display 'Login Form' title on the login page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toEqual",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "0.517 sec"
+            },
+            {
+                "id": "spec16",
+                "description": "Should redirect to the home page.",
+                "fullName": "workspace-project Login Should redirect to the home page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "7 secs"
+            },
+            {
+                "id": "spec17",
+                "description": "If form is not valid then it should stay on login page.",
+                "fullName": "workspace-project Login If form is not valid then it should stay on login page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "7 secs"
+            },
+            {
+                "id": "spec18",
+                "description": "If username and password is empty then it should stay on login page.",
+                "fullName": "workspace-project Login If username and password is empty then it should stay on login page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "7 secs"
+            },
+            {
+                "id": "spec19",
+                "description": "Shold redirect to registration page.",
+                "fullName": "workspace-project Login Shold redirect to registration page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "3 secs"
+            }
+        ]
+    },
+    "suite6": {
+        "id": "suite6",
+        "description": "workspace-project Registration",
+        "fullName": "workspace-project Registration",
+        "failedExpectations": [],
+        "status": "finished",
+        "specs": [
+            {
+                "id": "spec20",
+                "description": "Should display 'Registration Form' title on the registration page.",
+                "fullName": "workspace-project Registration Should display 'Registration Form' title on the registration page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toEqual",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "0.543 sec"
+            },
+            {
+                "id": "spec21",
+                "description": "Shold redirect to login page.",
+                "fullName": "workspace-project Registration Shold redirect to login page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "4 secs"
+            },
+            {
+                "id": "spec22",
+                "description": "Should redirect to the home page.",
+                "fullName": "workspace-project Registration Should redirect to the home page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "9 secs"
+            },
+            {
+                "id": "spec23",
+                "description": "If all the field is empty then it should stay on registration page.",
+                "fullName": "workspace-project Registration If all the field is empty then it should stay on registration page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "9 secs"
+            },
+            {
+                "id": "spec24",
+                "description": "If form is not valid then it should stay on registration page.",
+                "fullName": "workspace-project Registration If form is not valid then it should stay on registration page.",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "8 secs"
+            }
+        ]
+    },
+    "suite7": {
+        "id": "suite7",
+        "description": "workspace-project UserPortalPage",
+        "fullName": "workspace-project UserPortalPage",
+        "failedExpectations": [],
+        "status": "finished",
+        "specs": []
+    }
+}
