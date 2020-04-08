@@ -13,7 +13,11 @@ exports.config = {
   specs: [
     './src/**/E2E-testing/*.e2e-spec.ts'
   ],
+  // Below "chromeOptions" configuration is for run the E2E cases without open chrome browser.
   capabilities: {
+    chromeOptions: {
+      args: ['--headless']
+    },
     browserName: 'chrome'
   },
   directConnect: true,
