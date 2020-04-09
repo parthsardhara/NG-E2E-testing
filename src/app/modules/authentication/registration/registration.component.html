@@ -3,8 +3,8 @@
     <form [formGroup]="registrationForm" (ngSubmit)="registrationFormSubmit()">
         <div class="form-group">
             <label for="exampleInputEmail1">Firstname</label>
-            <input type="text" id="registrationFormFirstname" class="form-control" [formControl]="registrationForm.get('firstname')"
-                placeholder="Enter firstname">
+            <input type="text" id="registrationFormFirstname" class="form-control"
+                [formControl]="registrationForm.get('firstname')" placeholder="Enter firstname">
             <small class="form-text text-danger"
                 *ngIf="isLoginFormSubmited && registrationForm.get('firstname').invalid && (registrationForm.get('firstname').dirty || registrationForm.get('firstname').touched)">
                 Please enter valide firstname.</small>
@@ -12,8 +12,8 @@
 
         <div class="form-group">
             <label for="exampleInputEmail1">Lastname</label>
-            <input type="text" id="registrationFormLastname" class="form-control" [formControl]="registrationForm.get('lastname')"
-                placeholder="Enter lastname">
+            <input type="text" id="registrationFormLastname" class="form-control"
+                [formControl]="registrationForm.get('lastname')" placeholder="Enter lastname">
 
             <small class="form-text text-danger"
                 *ngIf="isLoginFormSubmited && registrationForm.get('lastname').invalid && (registrationForm.get('lastname').dirty || registrationForm.get('lastname').touched)">
@@ -22,8 +22,8 @@
 
         <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
-            <input type="text" id="registrationFormEmail" class="form-control" [formControl]="registrationForm.get('email')"
-                placeholder="Enter email">
+            <input type="text" id="registrationFormEmail" class="form-control"
+                [formControl]="registrationForm.get('email')" placeholder="Enter email">
 
             <small class="form-text text-danger"
                 *ngIf="isLoginFormSubmited && registrationForm.get('email').invalid && (registrationForm.get('email').dirty || registrationForm.get('email').touched)">
@@ -32,12 +32,41 @@
 
         <div class="form-group">
             <label for="exampleInputEmail1">Password</label>
-            <input type="password" id="registrationFormPasssword" class="form-control" [formControl]="registrationForm.get('password')"
-                placeholder="Enter passowrd">
+            <input type="password" id="registrationFormPasssword" class="form-control"
+                [formControl]="registrationForm.get('password')" placeholder="Enter passowrd">
 
             <small class="form-text text-danger"
                 *ngIf="isLoginFormSubmited && registrationForm.get('password').invalid && (registrationForm.get('password').dirty || registrationForm.get('password').touched)">
                 Please enter valide passowrd.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="inlineFormCustomLabel">Company</label>
+            <select [formControl]="registrationForm.get('companyName')" class="custom-select mr-sm-2"
+                id="inlineFormCustomSelect">
+                <input type="text">
+                <option value="" id="registrationForm-default" disabled selected>Please Choose company name...</option>
+                <option id="registrationForm-Bacancy" value="Bacancy">Bacancy</option>
+                <option id="registrationForm-Google" value="Google">Google</option>
+                <option id="registrationForm-Apple" value="Apple">Apple</option>
+            </select>
+
+            <small class="form-text text-danger"
+                *ngIf="isLoginFormSubmited && registrationForm.get('companyName').invalid && (registrationForm.get('companyName').dirty || registrationForm.get('companyName').touched)">
+                Please select Company name.</small>
+        </div>
+
+        <div class="d-flex pl-1">
+            <div class="col-2">
+                <input type="radio" [formControl]="registrationForm.get('male')" class="form-check-input" value="male"
+                    (change)="checkboxSelected($event)" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Male</label>
+            </div>
+            <div class="col-2">
+                <input type="radio" [formControl]="registrationForm.get('female')" class="form-check-input"
+                    value="female" (change)="checkboxSelected($event)" id="exampleCheck2">
+                <label class="form-check-label" for="exampleCheck2">Female</label>
+            </div>
         </div>
 
         <button class="btn btn-primary" id="registrationFormSubmit" type="submit">Submit</button>

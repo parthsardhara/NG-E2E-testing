@@ -50,7 +50,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "4 secs"
+                "duration": "6 secs"
             }
         ]
     },
@@ -194,7 +194,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "17 secs"
+                "duration": "16 secs"
             },
             {
                 "id": "spec7",
@@ -229,7 +229,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "8 secs"
+                "duration": "9 secs"
             },
             {
                 "id": "spec8",
@@ -284,7 +284,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "3 secs"
+                "duration": "4 secs"
             },
             {
                 "id": "spec10",
@@ -376,7 +376,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "8 secs"
+                "duration": "9 secs"
             },
             {
                 "id": "spec14",
@@ -431,7 +431,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "0.426 sec"
+                "duration": "0.478 sec"
             },
             {
                 "id": "spec16",
@@ -477,7 +477,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "6 secs"
+                "duration": "7 secs"
             },
             {
                 "id": "spec18",
@@ -500,7 +500,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "7 secs"
+                "duration": "8 secs"
             },
             {
                 "id": "spec19",
@@ -555,7 +555,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "0.445 sec"
+                "duration": "0.646 sec"
             },
             {
                 "id": "spec21",
@@ -578,7 +578,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "3 secs"
+                "duration": "4 secs"
             },
             {
                 "id": "spec22",
@@ -601,7 +601,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "9 secs"
+                "duration": "12 secs"
             },
             {
                 "id": "spec23",
@@ -624,7 +624,7 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "9 secs"
+                "duration": "10 secs"
             },
             {
                 "id": "spec24",
@@ -647,7 +647,30 @@
                 ],
                 "pendingReason": "",
                 "status": "passed",
-                "duration": "8 secs"
+                "duration": "10 secs"
+            },
+            {
+                "id": "spec25",
+                "description": "Should select the last option of the compnay name dropdown",
+                "fullName": "workspace-project Registration Should select the last option of the compnay name dropdown",
+                "failedExpectations": [],
+                "passedExpectations": [
+                    {
+                        "matcherName": "toBe",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    },
+                    {
+                        "matcherName": "toContain",
+                        "message": "Passed.",
+                        "stack": "",
+                        "passed": true
+                    }
+                ],
+                "pendingReason": "",
+                "status": "passed",
+                "duration": "5 secs"
             }
         ]
     },

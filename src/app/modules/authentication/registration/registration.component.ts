@@ -22,8 +22,11 @@ export class RegistrationComponent implements OnInit {
       Validators.minLength(12),
       Validators.maxLength(12)
     ]),
+    companyName: new FormControl('', [Validators.required]),
+    male: new FormControl(true),
+    female: new FormControl(false),
     // password: new FormControl(null, [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{5,})/)]),
-  });
+  }, { updateOn: 'change' });
 
   public isLoginFormSubmited: boolean = false;
 
@@ -31,12 +34,20 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  checkboxSelected(e) {
+    if (e.target.value === 'male') {
+      this.registrationForm.controls.female.setValue(false);
+    } else {
+      this.registrationForm.controls.male.setValue(false);
+    }
+  }
+
   registrationFormSubmit() {
     this.isLoginFormSubmited = true;
     if (this.registrationForm.valid) {
       this.router.navigate(['login']);
       this.registrationForm.reset();
     }
-
   }
+
 }

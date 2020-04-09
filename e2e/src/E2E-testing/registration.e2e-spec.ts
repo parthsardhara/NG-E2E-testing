@@ -43,6 +43,12 @@ describe('workspace-project Registration', () => {
     expect(browser.getCurrentUrl()).toContain('/registration');
   });
 
+  it('Should select the last option of the compnay name dropdown', () => {
+    registrationPage.navigateTo('/registration');
+    browser.sleep(1000);
+    expect(registrationPage.setRegistrationFormCompanuDropdown()).toBe('Apple');
+  });
+  
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get(logging.Type.BROWSER);
