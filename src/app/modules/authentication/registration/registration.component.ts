@@ -23,8 +23,8 @@ export class RegistrationComponent implements OnInit {
       Validators.maxLength(12)
     ]),
     companyName: new FormControl('', [Validators.required]),
-    male: new FormControl(true),
-    female: new FormControl(false),
+    male: new FormControl('male'),
+    female: new FormControl(''),
     // password: new FormControl(null, [Validators.required, Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{5,})/)]),
   }, { updateOn: 'change' });
 

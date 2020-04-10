@@ -6,7 +6,7 @@
         "passed": true
       }
     ],
-    "duration": 3564
+    "duration": 3727
   },
   {
     "description": "workspace-project Api should display 'Table' on the API page.",
@@ -15,7 +15,7 @@
         "passed": true
       }
     ],
-    "duration": 5685
+    "duration": 4388
   },
   {
     "description": "workspace-project Crud should render 'Add Employee' button on the crud page.",
@@ -24,7 +24,7 @@
         "passed": true
       }
     ],
-    "duration": 2551
+    "duration": 2618
   },
   {
     "description": "workspace-project Crud Should render 'Crud Table' on the Crud page.",
@@ -33,7 +33,7 @@
         "passed": true
       }
     ],
-    "duration": 2092
+    "duration": 2099
   },
   {
     "description": "workspace-project Crud Should render 'Edit your details' on Crud page while edit the details of the employee.",
@@ -42,7 +42,7 @@
         "passed": true
       }
     ],
-    "duration": 3292
+    "duration": 3332
   },
   {
     "description": "workspace-project Crud Should render 'Add your details' on Crud page while add the details of the employee.",
@@ -51,7 +51,7 @@
         "passed": true
       }
     ],
-    "duration": 3249
+    "duration": 3340
   },
   {
     "description": "workspace-project Crud After add the employee dertails, Should render employee id, name and compnay name in the table on crud page.",
@@ -60,7 +60,7 @@
         "passed": true
       }
     ],
-    "duration": 16221
+    "duration": 16739
   },
   {
     "description": "workspace-project Crud Should render edited employee id, name and compnay name in the table on crud page.",
@@ -69,7 +69,7 @@
         "passed": true
       }
     ],
-    "duration": 8810
+    "duration": 9165
   },
   {
     "description": "workspace-project Crud Should not render deleted employee's details on the table.",
@@ -78,7 +78,7 @@
         "passed": true
       }
     ],
-    "duration": 2148
+    "duration": 2263
   },
   {
     "description": "workspace-project Home should display 'WELCOME IF' on the Home page.",
@@ -87,7 +87,7 @@
         "passed": true
       }
     ],
-    "duration": 3704
+    "duration": 3737
   },
   {
     "description": "workspace-project Home should display 'WELCOME ELSE' title on the Home page.",
@@ -96,7 +96,7 @@
         "passed": true
       }
     ],
-    "duration": 4146
+    "duration": 4322
   },
   {
     "description": "workspace-project Home should display 'Home page' title on the Home page.",
@@ -105,7 +105,7 @@
         "passed": true
       }
     ],
-    "duration": 3226
+    "duration": 3405
   },
   {
     "description": "workspace-project Home should display Sum of num1 and num2 in the modal.",
@@ -114,7 +114,7 @@
         "passed": true
       }
     ],
-    "duration": 6482
+    "duration": 6782
   },
   {
     "description": "workspace-project Home should display error for num1 validation in the modal.",
@@ -123,7 +123,7 @@
         "passed": true
       }
     ],
-    "duration": 8671
+    "duration": 9153
   },
   {
     "description": "workspace-project Home should close the modal.",
@@ -132,7 +132,7 @@
         "passed": true
       }
     ],
-    "duration": 5175
+    "duration": 5240
   },
   {
     "description": "workspace-project Login should display 'Login Form' title on the login page.",
@@ -141,7 +141,7 @@
         "passed": true
       }
     ],
-    "duration": 478
+    "duration": 602
   },
   {
     "description": "workspace-project Login Should redirect to the home page.",
@@ -150,7 +150,7 @@
         "passed": true
       }
     ],
-    "duration": 7474
+    "duration": 7909
   },
   {
     "description": "workspace-project Login If form is not valid then it should stay on login page.",
@@ -159,7 +159,7 @@
         "passed": true
       }
     ],
-    "duration": 6977
+    "duration": 7284
   },
   {
     "description": "workspace-project Login If username and password is empty then it should stay on login page.",
@@ -168,7 +168,7 @@
         "passed": true
       }
     ],
-    "duration": 7516
+    "duration": 7655
   },
   {
     "description": "workspace-project Login Shold redirect to registration page.",
@@ -177,7 +177,7 @@
         "passed": true
       }
     ],
-    "duration": 3168
+    "duration": 3311
   },
   {
     "description": "workspace-project Registration Should display 'Registration Form' title on the registration page.",
@@ -186,7 +186,7 @@
         "passed": true
       }
     ],
-    "duration": 646
+    "duration": 634
   },
   {
     "description": "workspace-project Registration Shold redirect to login page.",
@@ -195,7 +195,7 @@
         "passed": true
       }
     ],
-    "duration": 3693
+    "duration": 3722
   },
   {
     "description": "workspace-project Registration Should redirect to the home page.",
@@ -204,7 +204,7 @@
         "passed": true
       }
     ],
-    "duration": 11512
+    "duration": 13744
   },
   {
     "description": "workspace-project Registration If all the field is empty then it should stay on registration page.",
@@ -213,7 +213,7 @@
         "passed": true
       }
     ],
-    "duration": 10173
+    "duration": 11048
   },
   {
     "description": "workspace-project Registration If form is not valid then it should stay on registration page.",
@@ -222,7 +222,7 @@
         "passed": true
       }
     ],
-    "duration": 9628
+    "duration": 11412
   },
   {
     "description": "workspace-project Registration Should select the last option of the compnay name dropdown",
@@ -231,6 +231,6 @@
         "passed": true
       }
     ],
-    "duration": 4926
+    "duration": 5077
   }
 ]

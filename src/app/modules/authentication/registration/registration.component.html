@@ -44,7 +44,6 @@
             <label for="inlineFormCustomLabel">Company</label>
             <select [formControl]="registrationForm.get('companyName')" class="custom-select mr-sm-2"
                 id="inlineFormCustomSelect">
-                <input type="text">
                 <option value="" id="registrationForm-default" disabled selected>Please Choose company name...</option>
                 <option id="registrationForm-Bacancy" value="Bacancy">Bacancy</option>
                 <option id="registrationForm-Google" value="Google">Google</option>
@@ -59,13 +58,13 @@
         <div class="d-flex pl-1">
             <div class="col-2">
                 <input type="radio" [formControl]="registrationForm.get('male')" class="form-check-input" value="male"
-                    (change)="checkboxSelected($event)" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Male</label>
+                    (change)="checkboxSelected($event)" id="maleCheck">
+                <label class="form-check-label" for="maleCheck">Male</label>
             </div>
             <div class="col-2">
                 <input type="radio" [formControl]="registrationForm.get('female')" class="form-check-input"
-                    value="female" (change)="checkboxSelected($event)" id="exampleCheck2">
-                <label class="form-check-label" for="exampleCheck2">Female</label>
+                    value="female" (change)="checkboxSelected($event)" id="femaleCheck">
+                <label class="form-check-label" for="femaleCheck">Female</label>
             </div>
         </div>
 

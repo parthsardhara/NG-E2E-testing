@@ -34,6 +34,8 @@ export class RegistrationPage {
         browser.sleep(1000);
         element(by.id('registrationForm-Bacancy')).click();
         browser.sleep(1000);
+        element(by.id('femaleCheck')).click();
+        browser.sleep(1000);
         element(by.id('registrationFormSubmit')).click();
     }
 
@@ -63,6 +65,8 @@ export class RegistrationPage {
         element(by.id('registrationFormPasssword')).sendKeys('Admins@#1234');
         browser.sleep(1000);
         element(by.id('inlineFormCustomSelect')).click();
+        browser.sleep(1000);
+        element(by.id('femaleCheck')).click();
         browser.sleep(1000);
         element(by.id('registrationFormSubmit')).click();
     }

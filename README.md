@@ -1,4 +1,4 @@
-# MyDreamApp
+# E2E Testing
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.7.
 
@@ -21,6 +21,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+NOTE:- For run the E2E test cases, Google Chrome version should be:- Version 81.0.4044.92 (Official Build) (64-bit)
 
 ## Further help
 
